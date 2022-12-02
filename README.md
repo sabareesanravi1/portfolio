@@ -1,4 +1,3 @@
-# Developer
 ---
 Title: portfolio	
 Author: sabareesan.r
