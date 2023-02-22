@@ -11,7 +11,7 @@ function TechnologyTabDivision() {
     >
       <Tab eventKey="home" title="Web">
       <div>
-            TechnologyTabDivision
+            
         </div>
     </Tab>
       <Tab eventKey="profile" title="Desktop">

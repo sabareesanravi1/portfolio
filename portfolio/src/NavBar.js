@@ -29,7 +29,7 @@ function NavBar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Download Resume</Nav.Link>
+            <Nav.Link href={ require("./resources/files/Sabareesan_Ravi_Software_Developer.pdf")} download>Download Resume</Nav.Link>
             <Nav.Link eventKey={2} href="https://www.linkedin.com/in/sabareesan-ravi/">
             <img
               alt=""
