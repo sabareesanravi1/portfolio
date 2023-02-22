@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.005bf7c7.css",
-    "main.js": "/portfolio/static/js/main.8a34c6aa.js",
+    "main.js": "/portfolio/static/js/main.cf3793e5.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/hero_gif.gif": "/portfolio/static/media/hero_gif.5d850951310c0548bfcf.gif",
+    "static/media/bitmoji.jpeg": "/portfolio/static/media/bitmoji.231b876223a568d18ff5.jpeg",
+    "static/media/Sabareesan_Ravi_Software_Developer.pdf": "/portfolio/static/media/Sabareesan_Ravi_Software_Developer.330d83855972246bc84d.pdf",
     "static/media/github.png": "/portfolio/static/media/github.44eee0c4a6c25b0d7347.png",
     "static/media/stack-overflow.png": "/portfolio/static/media/stack-overflow.579cff432dec19bc3d23.png",
     "static/media/gmail.png": "/portfolio/static/media/gmail.a2f2146f929409405da0.png",
     "static/media/linkedin.png": "/portfolio/static/media/linkedin.b543965794897027099a.png",
     "index.html": "/portfolio/index.html",
     "main.005bf7c7.css.map": "/portfolio/static/css/main.005bf7c7.css.map",
-    "main.8a34c6aa.js.map": "/portfolio/static/js/main.8a34c6aa.js.map",
+    "main.cf3793e5.js.map": "/portfolio/static/js/main.cf3793e5.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.005bf7c7.css",
-    "static/js/main.8a34c6aa.js"
+    "static/js/main.cf3793e5.js"
   ]
 }
