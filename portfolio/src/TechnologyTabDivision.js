@@ -1,26 +1,10 @@
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import React from "react";
 
-function TechnologyTabDivision() {
+const TechnologyTabDivision = () => {
   return (
-    <Tabs
-      defaultActiveKey="profile"
-      id="justify-tab-example"
-      className="mb-3"
-      justify
-    >
-      <Tab eventKey="home" title="Web">
-      <div>
-            
-        </div>
-    </Tab>
-      <Tab eventKey="profile" title="Desktop">
-        <div>
-            TechnologyTabDivision
-        </div>
-      </Tab>
-      </Tabs>
+    <div>Techstacks</div>
   );
-}
+};
+
 
 export default TechnologyTabDivision;

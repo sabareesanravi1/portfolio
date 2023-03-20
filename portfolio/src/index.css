@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+p
+{
+  font-size: 15px;
+}
+
 /* for the pen */
 html, body {
   margin: 0;
@@ -61,13 +66,14 @@ html, body {
 /* hero background image */
 .bgimage {
   height:100vh;
-  background: url('resources/hero_gif.gif');
+  background: #fed70b;
   background-size:cover;
   position:relative;
 }
 /* text css above hero image*/
 .hero_title {
-  font-size: 4.5rem;
+  letter-spacing: -0.1rem;
+  font-size: 70px;
 }
 .hero_desc {
   font-size: 2rem;
@@ -78,6 +84,37 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px 20px;
+  margin: 10px 0px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+figcaption
+{
+  text-align: center;
+  color:black;
+  font-weight: lighter;
+  font-size: 11px;
+  margin-top: 10px;
 }
 
