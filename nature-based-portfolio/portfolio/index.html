@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="personal-light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabareesan Ravi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&family=Fira+Code:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");</script>
+
+</head>
+<body>
+
+<!-- WATCH MODAL -->
+<div class="modal-overlay" id="watch-modal" onclick="closeWatchModal(event)">
+  <div class="modal-box">
+    <div class="modal-close" onclick="closeWatchModal(null, true)">✕</div>
+    <div class="modal-header">
+      <div class="modal-brand-hero">
+        <div class="modal-brand-logo" id="modal-logo"></div>
+        <div>
+          <div class="modal-brand-name" id="modal-brand-name"></div>
+          <div class="modal-brand-tagline" id="modal-brand-tagline"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-watches" id="modal-watches"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-logo" href="#hero"><span>S</span>abareesan <span>R</span>avi</a>
+  <ul class="nav-links" id="nav-links"></ul>
+  <div class="nav-controls">
+    <div class="ctrl-group" id="mode-grp">
+      <button class="ctrl-btn active" onclick="setMode('personal')">🌿 Personal</button>
+      <button class="ctrl-btn" onclick="setMode('work')">🏙 Work</button>
+    </div>
+    <div class="ctrl-group" id="light-grp">
+      <button class="ctrl-btn active" onclick="setLight('light')">☀️</button>
+      <button class="ctrl-btn" onclick="setLight('dark')">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MODE BADGE -->
+<div class="mode-badge"><div class="mode-dot"></div><span id="badge-lbl">Personal · Day</span></div>
+
+<!-- ========== HERO ========== -->
+<section id="hero" class="hero">
+  <div class="sky"></div>
+  <div class="stars-layer" id="stars-layer"></div>
+  <div class="sun"></div>
+  <div class="clouds-layer" id="clouds-layer"></div>
+
+  <!-- Village -->
+  <div class="village" id="village">
+    <div class="forest-far" id="forest-far"></div>
+    <div class="hills"><div class="hill h1"></div><div class="hill h2"></div><div class="hill h3"></div></div>
+    <div class="ground-base"></div>
+    <div class="vil-path"></div>
+    <div class="forest-mid" id="forest-mid"></div>
+    <div class="vil-houses" id="vil-houses"></div>
+    <div class="trees-fg" id="trees-fg"></div>
+    <div class="fog-layer fog-village"></div>
+    <div id="fireflies-wrap"></div>
+  </div>
+
+  <!-- City -->
+  <div class="city" id="city-wrap">
+    <div class="skyline-wrap" id="skyline-wrap"></div>
+    <div class="city-ground"></div>
+    <div class="road"><div class="road-dash"></div></div>
+    <div class="fog-layer fog-city"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Welcome to my world</div>
+    <h1 class="hero-name">Sabareesan<br><em>Ravi</em></h1>
+    <p class="hero-role">Senior Software Engineer · <strong>Oracle</strong></p>
+    <div class="hero-cta">
+      <a href="#personal-intro" class="btn-primary">Explore Personal</a>
+      <a href="#work-intro" class="btn-outline">View Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PERSONAL SECTIONS ============================= -->
+<div class="personal-only">
+
+<!-- PERSONAL INTRO -->
+<section id="personal-intro">
+  <div class="section-wrap">
+    <div class="section-label">Personal</div>
+    <h2 class="section-title">Hello, I'm <em>Sabareesan</em></h2>
+    <div class="intro-grid">
+      <div>
+        <div class="intro-avatar"><img src="images/avatar.jpg" height="650px" width="500px" style="margin-top:50px;"/></div>
+      </div>
+      <div class="intro-body">
+        <p>I'm a software engineer who loves building things — not just in code, but in words, collections, and ideas. When I'm not shipping features at Oracle, I'm writing about technology, curating mechanical watches, and tinkering with my desk setup.</p>
+        <p>This space is where I share the quieter, more personal side of life — stories, curiosities, and the things that genuinely delight me. Pull up a chair, explore at your own pace.</p>
+        <p>Based in India. Passionate about craftsmanship — whether that's in software architecture, watchmaking, or a well-structured essay.</p>
+        <div class="intro-links">
+          <a href="#personal-youtube" class="pill-link">▶️ YouTube</a>
+          <a href="#personal-writing" class="pill-link">✍️ Writing</a>
+          <a href="#personal-watches" class="pill-link">⌚ Watches</a>
+          <a href="#personal-gadgets" class="pill-link">🖥️ Gadgets</a>
+          <a href="#personal-medium" class="pill-link">📝 Medium</a>
+          <a href="#personal-quora" class="pill-link">💬 Quora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section id="personal-youtube">
+  <div class="section-wrap">
+    <div class="section-label">YouTube</div>
+    <h2 class="section-title">Watch me on <em>YouTube</em></h2>
+
+    <div class="platform-hero" style="background:linear-gradient(135deg,rgba(255,0,0,0.06),rgba(255,0,0,0.02));border-color:rgba(255,0,0,0.15);">
+      <div class="platform-logo" style="background:linear-gradient(135deg,#ff0000,#cc0000);border-radius:20px;flex-shrink:0;">
+        <svg viewBox="0 0 48 48" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+          <path d="M44.5 14.3s-.5-3.3-2-4.8c-1.9-2-4-2-5-2.1C31.5 7 24 7 24 7s-7.5 0-13.5.4c-1 .1-3.1.1-5 2.1-1.5 1.5-2 4.8-2 4.8S3 18 3 21.7v3.5c0 3.7.5 7.4.5 7.4s.5 3.3 2 4.8c1.9 2 4.4 1.9 5.5 2.1C14.5 40 24 40 24 40s7.5 0 13.5-.5c1-.1 3.1-.1 5-2.1 1.5-1.5 2-4.8 2-4.8s.5-3.7.5-7.4v-3.5c0-3.7-.5-7.4-.5-7.4z" fill="white"/>
+          <polygon points="20,16 20,32 33,24" fill="#ff0000"/>
+        </svg>
+      </div>
+      <div class="platform-info">
+        <h2 style="display:flex;align-items:center;gap:10px;">
+          Tech &amp; Lifestyle of a SSE
+          <span style="background:#ff0000;color:white;font-size:.6rem;padding:3px 8px;border-radius:4px;font-family:monospace;font-weight:500">CHANNEL</span>
+        </h2>
+        <p>Behind-the-scenes of life as a Senior Software Engineer — setup tours, tech reviews, career stories, and the honest reality of working at Oracle, Microsoft, and Zoho. Gear, code, and everything in between.</p>
+        <div class="stats-row">
+          <div class="stat-item"><span class="stat-num" style="color:#ff0000">Tech</span><span class="stat-lbl">Category</span></div>
+          <div class="stat-item"><span class="stat-num" style="color:#ff0000">SSE</span><span class="stat-lbl">Focus</span></div>
+          <div class="stat-item"><span class="stat-num" style="color:#ff0000">Life</span><span class="stat-lbl">Lifestyle</span></div>
+        </div>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.youtube.com/channel/UCaoz1nU01WEi4c1v_ACqfdQ" target="_blank" class="btn-primary" style="background:#ff0000;display:inline-flex;align-items:center;gap:8px;">&#9654; Visit Channel</a>
+          <a href="https://www.youtube.com/channel/UCaoz1nU01WEi4c1v_ACqfdQ?sub_confirmation=1" target="_blank" class="btn-outline" style="border-color:rgba(255,0,0,0.4);color:#ff0000;">&#128276; Subscribe</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--text);margin-bottom:24px;">Video Series</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:40px;">
+
+      <div class="writing-card" style="border-left:4px solid #ff0000;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:42px;height:42px;background:linear-gradient(135deg,#ff0000,#cc0000);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fira Code',monospace;font-size:.65rem;color:#ff0000;letter-spacing:.12em;text-transform:uppercase;">Series 01</div>
+            <div style="font-size:.95rem;font-weight:500;color:var(--text);">Office Tour Series</div>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--text2);line-height:1.7;font-weight:300;">A walk-through of the offices I've worked in — Zoho, Microsoft, and Oracle. The culture, the vibe, the desk setups, and the little things that make each workplace unique.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="hi" style="background:rgba(255,0,0,0.1);color:#ff0000;border:1px solid rgba(255,0,0,0.2)">▶ Active</span>
+          <span class="hi">Offices</span><span class="hi">Workplaces</span><span class="hi">Culture</span>
+        </div>
+      </div>
+
+      <div class="writing-card" style="border-left:4px solid #ff6600;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:42px;height:42px;background:linear-gradient(135deg,#ff6600,#ff4400);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fira Code',monospace;font-size:.65rem;color:#ff6600;letter-spacing:.12em;text-transform:uppercase;">Series 02</div>
+            <div style="font-size:.95rem;font-weight:500;color:var(--text);">Office Food Series</div>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--text2);line-height:1.7;font-weight:300;">Exploring the cafeterias, canteens, and food culture at each company. From Zoho's legendary mess to Microsoft's fancy spreads — honest food reviews from a SSE's perspective.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="hi" style="background:rgba(255,102,0,0.1);color:#ff6600;border:1px solid rgba(255,102,0,0.2)">▶ Active</span>
+          <span class="hi">Food</span><span class="hi">Cafeteria</span><span class="hi">Reviews</span>
+        </div>
+      </div>
+
+      <div class="writing-card" style="border-left:4px solid #e8522a;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:42px;height:42px;background:linear-gradient(135deg,#e8522a,#c83010);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fira Code',monospace;font-size:.65rem;color:#e8522a;letter-spacing:.12em;text-transform:uppercase;">Series 03</div>
+            <div style="font-size:.95rem;font-weight:500;color:var(--text);">Office Outing Series</div>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--text2);line-height:1.7;font-weight:300;">Team outings, off-sites, hackathons, and the fun side of corporate life. What happens when engineers step away from their desks and actually go outside together.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="hi" style="background:rgba(232,82,42,0.1);color:#e8522a;border:1px solid rgba(232,82,42,0.2)">▶ Active</span>
+          <span class="hi">Outings</span><span class="hi">Team</span><span class="hi">Events</span>
+        </div>
+      </div>
+
+      <div class="writing-card" style="border-left:4px solid #888;opacity:.85;">
+        <div style="position:absolute;top:14px;right:14px;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:white;font-size:.6rem;padding:3px 10px;border-radius:10px;font-family:'Fira Code',monospace;letter-spacing:.08em;font-weight:500;">UPCOMING</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:42px;height:42px;background:linear-gradient(135deg,#6b7280,#4b5563);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Fira Code',monospace;font-size:.65rem;color:#888;letter-spacing:.12em;text-transform:uppercase;">Series 04</div>
+            <div style="font-size:.95rem;font-weight:500;color:var(--text);">Career Series</div>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--text2);line-height:1.7;font-weight:300;">Deep dives into software engineering careers — how to crack tier-1 companies, what skills actually matter, salary transparency, and the honest journey from fresher to Senior SWE.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+          <span class="hi" style="background:rgba(124,58,237,0.1);color:#7c3aed;border:1px solid rgba(124,58,237,0.2)">🚀 Coming Soon</span>
+          <span class="hi">Career</span><span class="hi">Interviews</span><span class="hi">Growth</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#ff0000,#cc0000);border-radius:16px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div style="font-family:serif;font-size:1.6rem;font-weight:300;color:white;margin-bottom:6px;">Join the channel</div>
+        <div style="font-size:.88rem;color:rgba(255,255,255,.85);font-weight:300;">New videos on tech, career, and the SSE lifestyle. Subscribe to stay updated.</div>
+      </div>
+      <a href="https://www.youtube.com/channel/UCaoz1nU01WEi4c1v_ACqfdQ?sub_confirmation=1" target="_blank"
+        style="padding:14px 28px;background:white;color:#ff0000;border-radius:8px;font-family:sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
+        &#128276; Subscribe Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="personal-writing">
+  <div class="section-wrap">
+    <div class="section-label">My Writing</div>
+    <h2 class="section-title">Words &amp; <em>Poetry</em></h2>
+
+    <div class="platform-hero" style="background:linear-gradient(135deg,rgba(131,58,180,0.07),rgba(253,29,29,0.04),rgba(252,176,69,0.06));border-color:rgba(131,58,180,0.18);margin-bottom:40px;">
+      <div class="platform-logo" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border-radius:20px;flex-shrink:0;">
+        <svg viewBox="0 0 24 24" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" fill="white"/>
+        </svg>
+      </div>
+      <div class="platform-info">
+        <h2 style="display:flex;align-items:center;gap:10px;">
+          @thepeartpoet
+          <span style="background:linear-gradient(135deg,#833ab4,#fd1d1d);color:white;font-size:.6rem;padding:3px 10px;border-radius:20px;font-family:'Fira Code',monospace;font-weight:500;letter-spacing:.06em;">POETRY</span>
+        </h2>
+        <p>A quieter corner of the internet where I write poetry. Words on life, longing, and the small moments that linger. Follow along on Instagram for new poems, reflections, and the occasional creative ramble.</p>
+        <div class="stats-row">
+          <div class="stat-item"><span class="stat-num" style="background:linear-gradient(135deg,#833ab4,#fd1d1d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">✦</span><span class="stat-lbl">Poetry</span></div>
+          <div class="stat-item"><span class="stat-num" style="background:linear-gradient(135deg,#fd1d1d,#fcb045);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">✦</span><span class="stat-lbl">Reflections</span></div>
+          <div class="stat-item"><span class="stat-num" style="background:linear-gradient(135deg,#fcb045,#fd1d1d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">✦</span><span class="stat-lbl">Stories</span></div>
+        </div>
+        <div style="margin-top:20px;">
+          <a href="https://www.instagram.com/thepeartpoet/" target="_blank" class="btn-primary"
+            style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);display:inline-flex;align-items:center;gap:8px;border:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Visit @thepeartpoet →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATCHES -->
+<section id="personal-watches">
+  <div class="section-wrap">
+    <div class="section-label">My Collection</div>
+    <h2 class="section-title">Watch <em>Collection</em></h2>
+    <p style="color:var(--text2);font-size:.9rem;line-height:1.75;font-weight:300;max-width:580px;margin-bottom:40px;">There's something meditative about analogue time. Each of these brands represents a different philosophy of what a watch should be — from everyday elegance to bold sport utility.</p>
+    <div class="collection-grid">
+      <div class="collect-card" onclick="openWatchModal('titan')" style="cursor:pointer">
+        <img src="images/titan-logo.png" alt="Titan Logo" class="collect-logo" style="width:80px; height: 60px;">
+        <div class="collect-name">Titan</div>
+        <div class="collect-sub">India's finest. Elegant dress watches for formal occasions, crafted with understated pride.</div>
+        <span class="collect-badge">Indian</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>
+      <div class="collect-card" onclick="openWatchModal('citizen')" style="cursor:pointer">
+        <img src="images/citizen-logo.svg" alt="Citizen Logo" class="collect-logo"  style="width:90px; height: 60px;">
+        <div class="collect-name">Citizen</div>
+        <div class="collect-sub">Precision Japanese engineering. Eco-Drive technology powered by light with sleek, modern designs.</div>
+        <span class="collect-badge">Japan</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>
+      <div class="collect-card" onclick="openWatchModal('casio')" style="cursor:pointer">
+        <img src="images/Casio-Logo.png" alt="Casio Logo" class="collect-logo"  style="width:100px; height: 60px;">
+        <div class="collect-name">Casio</div>
+        <div class="collect-sub">Indestructible utility. The G-Shock ethos — built for any adventure, any timezone, any chaos.</div>
+        <span class="collect-badge">Japan</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>
+      <div class="collect-card" onclick="openWatchModal('timex')" style="cursor:pointer">
+        <img src="images/timex-logo.png" alt="Timex Logo" class="collect-logo" style="width:80px; height: 60px;">
+        <div class="collect-name">Timex</div>
+        <div class="collect-sub">American heritage. Classic Indiglo dials and a legacy of honest, durable everyday wear.</div>
+        <span class="collect-badge">USA</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>
+      <div class="collect-card" onclick="openWatchModal('fossil')" style="cursor:pointer">
+        <img src="images/fossil-logo.png" alt="Fossil Logo" class="collect-logo" style="width:80px; height: 60px;">
+        <div class="collect-name">Fossil</div>
+        <div class="collect-sub">Where fashion meets function. Clean vintage-inspired designs that transition from desk to dinner.</div>
+        <span class="collect-badge">Style</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>  
+      <div class="collect-card" onclick="openWatchModal('fastrack')" style="cursor:pointer">
+        <img src="images/fastrack-logo.png" alt="Fossil Logo" class="collect-logo" style="width:100px; height: 60px;">
+        <div class="collect-name">Fastrack</div>
+        <div class="collect-sub">Youthful energy from Titan. Bold, sporty designs built for everyday style and fast-paced living.</div>
+        <span class="collect-badge">India</span>
+        <!-- <div style="margin-top:12px;font-size:.72rem;color:var(--accent);font-family:'Fira Code',monospace;letter-spacing:.06em">View Collection →</div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GADGETS -->
+<section id="personal-gadgets">
+  <div class="section-wrap">
+    <div class="section-label">My Setup</div>
+    <h2 class="section-title">Gadget <em>Collection</em></h2>
+    <p style="color:var(--text2);font-size:.9rem;line-height:1.75;font-weight:300;max-width:580px;margin-bottom:40px;">Two worlds, one desk. The gaming beast and the Apple sanctuary — each optimised for a different mode of work and play.</p>
+    <div class="collection-grid">
+      <div class="collect-card" style="grid-column:span 2;">
+        <span class="collect-icon">🖥️</span>
+        <div class="collect-name">Samsung Curved Monitor</div>
+        <div class="collect-sub">The centrepiece — ultra-wide curved display for immersive gaming and multi-window workflow.</div>
+        <span class="collect-badge">Display</span>
+      </div>
+      <div class="collect-card"><span class="collect-icon">💻</span><div class="collect-name">Lenovo Legion</div><div class="collect-sub">Gaming laptop powerhouse. Raw performance, RGB soul, handles anything I throw at it.</div><span class="collect-badge">Gaming</span></div>
+      <div class="collect-card"><span class="collect-icon">⌨️</span><div class="collect-name">Aula F75</div><div class="collect-sub">75% mechanical keyboard. Satisfying tactile switches, compact layout, premium build for daily typing.</div><span class="collect-badge">Mech KB</span></div>
+      <div class="collect-card"><span class="collect-icon">🖱️</span><div class="collect-name">Legion Mouse</div><div class="collect-sub">High-DPI precision gaming mouse — ergonomic, fast, and perfectly matched to the Legion ecosystem.</div><span class="collect-badge">Gaming</span></div>
+      <div class="collect-card"><span class="collect-icon">🎮</span><div class="collect-name">PS5 Controller</div><div class="collect-sub">DualSense haptic feedback brings a whole new dimension to PC gaming sessions.</div><span class="collect-badge">Console</span></div>
+      <div class="collect-card"><span class="collect-icon">🍎</span><div class="collect-name">MacBook Pro M4</div><div class="collect-sub">The creative and professional powerhouse. Silence, speed, and battery life that defies belief.</div><span class="collect-badge">Apple</span></div>
+      <div class="collect-card"><span class="collect-icon">🖱️</span><div class="collect-name">Magic Mouse</div><div class="collect-sub">Silky multitouch gestures for the macOS workflow. Minimal, beautiful, effortless.</div><span class="collect-badge">Apple</span></div>
+      <div class="collect-card"><span class="collect-icon">⌨️</span><div class="collect-name">Magic Keyboard</div><div class="collect-sub">Low-profile scissor keys paired with macOS shortcut mastery. The quiet side of the desk.</div><span class="collect-badge">Apple</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIUM -->
+<section id="personal-medium">
+  <div class="section-wrap">
+    <div class="section-label">Medium</div>
+    <h2 class="section-title">Read me on <em>Medium</em></h2>
+    <div class="platform-hero">
+      <div class="platform-logo medium-logo">Ⓜ</div>
+      <div class="platform-info">
+        <h2>Sabareesan Ravi on Medium</h2>
+        <p>I write about software engineering, career growth, and the intersection of technology and craft. From deep-dives into Java frameworks to reflections on professional growth across top-tier companies.</p>
+        <div style="margin-top:20px;">
+          <a href="https://medium.com/@sabareesanravi" target="_blank" class="btn-primary">Visit Medium Profile →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUORA -->
+<section id="personal-quora">
+  <div class="section-wrap">
+    <div class="section-label">Quora</div>
+    <h2 class="section-title">Answers on <em>Quora</em></h2>
+    <div class="platform-hero">
+      <div class="platform-logo quora-logo">Q</div>
+      <div class="platform-info">
+        <h2>Sabareesan Ravi on Quora</h2>
+        <p>I answer questions on software engineering career paths, Java ecosystem choices, Windows desktop development, and the journey from college to top-tier tech companies. Real-world answers from lived experience.</p>
+        <div style="margin-top:20px;">
+          <a href="https://www.quora.com/profile/Sabareesan-Ravi" target="_blank" class="btn-primary">Visit Quora Profile →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div><!-- end personal-only -->
+
+<!-- ============================= WORK SECTIONS ============================= -->
+<div class="work-only">
+
+<!-- WORK INTRO -->
+<section id="work-intro">
+  <div class="section-wrap">
+    <div class="work-intro-inner">
+      <div class="work-name-block">
+        <span class="eyebrow">// Senior Software Engineer</span>
+        <h1><strong>Sabareesan</strong> Ravi</h1>
+        <div class="work-title-tag">Oracle · 2026 — Present</div>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#work-exp" class="btn-primary">Experience</a>
+          <a href="#work-projects" class="btn-outline">Projects</a>
+          <a href="#work-contact" class="btn-outline">Contact</a>
+        </div>
+      </div>
+      <div class="work-summary">
+        <p>5+ years building enterprise-grade software across three world-class organisations — Zoho, Microsoft, and Oracle. I specialise in backend Java services and Windows desktop applications that operate at scale and under pressure.</p>
+        <p>I've contributed to features demoed at global events including the Dubai Expo and the US RAC Conference, and I take pride in shipping software that real users rely on every day.</p>
+        <p>CGPA 8.9 · Sri Krishna College of Engineering & Technology · 2016–2020</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION BAR -->
+<div class="edu-bar">
+  <div class="edu-item">
+    <div class="edu-logo">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5L5.33 12.8 4 13.5v.5l8 4.37L20 14v-.5l-1.33-.7L12 16.5z"/></svg>
+    </div>
+    <strong>SKCET</strong><small>B.E. · Computer science · 2016–2020</small>
+  </div>
+  <div class="edu-item">
+    <div class="edu-logo">
+    <img src="images/oracle.png"/>
+    </div>
+    <strong>Oracle</strong><small>Senior SWE · 2026–Present</small>
+  </div>
+  <div class="edu-item">
+    <div class="edu-logo">
+      <img src="images/microsoft.png"/>
+    </div>
+    <strong>Microsoft</strong><small>SWE-2 · 2024–2026</small>
+  </div>
+  <div class="edu-item">
+    <div class="edu-logo">
+       <img src="images/ZOHO.png"/>
+    </div>
+    <strong>Zoho</strong><small>MTS · 2020–2024</small>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="work-exp">
+  <div class="section-wrap">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Work <em>Experience</em></h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#f80000"></div>
+        <div class="tl-head-inner">
+          <div class="co-logo-wrap">
+            <img src="images/oracle.png"/>
+          </div>
+          <div><div class="tl-role">Senior Software Engineer</div><div class="tl-company-name" style="color:#e74c3c">Oracle</div></div>
+          <span class="tl-period" style="margin-left:auto">2026 — Present</span>
+        </div>
+        <div class="tl-desc">Leading backend service development using Java, SpringBoot, and Micronaut within Oracle's enterprise product suite. Driving architectural decisions, mentoring junior engineers, and contributing to high-impact features across cloud and on-premise deployments.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+          <span class="hi" style="background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2)">Java</span>
+          <span class="hi" style="background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2)">SpringBoot</span>
+          <span class="hi" style="background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2)">Micronaut</span>
+          <span class="hi" style="background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2)">Oracle Cloud</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#00a4ef"></div>
+        <div class="tl-head-inner">
+             <div class="co-logo-wrap">
+            <img src="images/microsoft.png"/>
+          </div>
+          <div><div class="tl-role">Software Engineer 2</div><div class="tl-company-name" style="color:#00a4ef">Microsoft</div></div>
+          <span class="tl-period" style="margin-left:auto">2024 — 2026</span>
+        </div>
+        <div class="tl-desc">Developed Windows desktop experiences using C#, WPF, WinUI, and XAML. Built robust Windows Services and contributed to internal tooling with ReactJS. Collaborated across distributed global teams to deliver features for enterprise customers.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+          <span class="hi" style="background:rgba(0,164,239,.1);color:#00a4ef;border:1px solid rgba(0,164,239,.2)">C#</span>
+          <span class="hi" style="background:rgba(0,164,239,.1);color:#00a4ef;border:1px solid rgba(0,164,239,.2)">WPF</span>
+          <span class="hi" style="background:rgba(0,164,239,.1);color:#00a4ef;border:1px solid rgba(0,164,239,.2)">WinUI</span>
+          <span class="hi" style="background:rgba(0,164,239,.1);color:#00a4ef;border:1px solid rgba(0,164,239,.2)">XAML</span>
+          <span class="hi" style="background:rgba(0,164,239,.1);color:#00a4ef;border:1px solid rgba(0,164,239,.2)">ReactJS</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#e8522a"></div>
+        <div class="tl-head-inner">
+             <div class="co-logo-wrap">
+            <img src="images/ZOHO.png"/>
+          </div>
+          <div><div class="tl-role">Member Technical Staff</div><div class="tl-company-name" style="color:#e8522a">Zoho Corporation</div></div>
+          <span class="tl-period" style="margin-left:auto">2020 — 2024</span>
+        </div>
+        <div class="tl-desc">Built and maintained features for Zoho's enterprise product stack. Pre-launched key product features at the Dubai Expo and the US RAC Conference. Awarded <strong>Top 5 Developer</strong> recognition in 2022 for outstanding engineering contributions.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+          <span class="hi" style="background:rgba(232,82,42,.1);color:#e8522a;border:1px solid rgba(232,82,42,.2)">Java</span>
+          <span class="hi" style="background:rgba(232,82,42,.1);color:#e8522a;border:1px solid rgba(232,82,42,.2)">SpringBoot</span>
+          <span class="hi" style="background:rgba(232,82,42,.1);color:#e8522a;border:1px solid rgba(232,82,42,.2)">🏆 Top 5 Dev 2022</span>
+          <span class="hi" style="background:rgba(232,82,42,.1);color:#e8522a;border:1px solid rgba(232,82,42,.2)">🌍 Dubai Expo</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#e8522a;opacity:.5"></div>
+        <div class="tl-head-inner">
+           <div class="co-logo-wrap">
+            <img src="images/ZOHO.png"/>
+          </div>
+          <div><div class="tl-role">Software Engineering Intern</div><div class="tl-company-name" style="color:#e8522a">Zoho Corporation</div></div>
+          <span class="tl-period" style="margin-left:auto">2019</span>
+        </div>
+        <div class="tl-desc">First exposure to production-grade software engineering. Built small features, wrote unit tests, and learned the discipline of shipping code that matters.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+          <span class="hi" style="background:rgba(232,82,42,.08);color:#e8522a;border:1px solid rgba(232,82,42,.15)">Java</span>
+          <span class="hi" style="background:rgba(232,82,42,.08);color:#e8522a;border:1px solid rgba(232,82,42,.15)">Internship</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="work-tech">
+  <div class="section-wrap">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Tech <em>Stack</em></h2>
+
+    <div class="tech-category">
+      <div class="tech-cat-title">Web &amp; Backend</div>
+      <div class="tech-chips">
+        <div class="tech-chip" style="--chip-color:#e76f00"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.526-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639" fill="#e76f00"/></svg></div>Java</div>
+        <div class="tech-chip" style="--chip-color:#6db33f"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.205 16.392c-2.469 3.289-7.741 2.179-11.122 2.338 0 0-.599.034-1.201.133 0 0 .228-.097.519-.198 2.374-.821 3.496-.986 4.939-1.727 2.71-1.388 5.408-4.413 5.957-7.555-1.032 3.022-4.17 5.623-7.027 6.679-1.955.722-5.492 1.424-5.493 1.424a5.28 5.28 0 0 1-.143-.076c-2.405-1.17-2.475-6.38 1.894-8.059 1.916-.736 3.747-.332 5.818-.825 2.208-.525 4.766-2.18 5.805-4.344 1.151 3.426.491 8.079-1.945 11.21zm1.951-15.301l-.51 1.561-.543-1.56a.847.847 0 0 0-.54-.54l-1.559-.51 1.56-.545a.847.847 0 0 0 .54-.538L21.645 0l.51 1.559a.849.849 0 0 0 .541.54l1.559.51-1.559.51a.849.849 0 0 0-.54.472z" fill="#6db33f"/></svg></div>SpringBoot</div>
+        <div class="tech-chip" style="--chip-color:#2575eb"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15zm0 3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z" fill="#2575eb"/></svg></div>Micronaut</div>
+        <div class="tech-chip" style="--chip-color:#61dafb"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.29zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.709 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.150-1.315.283-2.015.386.24-.375.48-.762.705-1.158.225-.39.435-.782.634-1.176zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" fill="#61dafb"/></svg></div>ReactJS</div>
+        <div class="tech-chip" style="--chip-color:#009688"><div class="chip-icon"><svg viewBox="0 0 24 24" fill="#009688"><path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S2 17.535 2 12 6.465 2 12 2zm-1 4v6H7l5 6 5-6h-4V6h-2z"/></svg></div>REST APIs</div>
+        <div class="tech-chip" style="--chip-color:#8e44ad"><div class="chip-icon"><svg viewBox="0 0 24 24" fill="#8e44ad"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg></div>Microservices</div>
+      </div>
+    </div>
+
+    <div class="tech-category">
+      <div class="tech-cat-title">Desktop</div>
+      <div class="tech-chips">
+        <div class="tech-chip" style="--chip-color:#9b4f96"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 15.97l.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96C2.57 15.77 2 14.16 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.34c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.74-1.15 1.87-1.18 3.37 0 1.37.37 2.45 1.08 3.23.71.79 1.71 1.18 3 1.18.48 0 .91-.04 1.29-.13l1.13-.37zM13 11h2V9h1v2h2v1h-2v2h-1v-2h-2v-1zm5 0h1V9h1v2h1v1h-1v2h-1v-2h-1v-1z" fill="#9b4f96"/></svg></div>C#</div>
+        <div class="tech-chip" style="--chip-color:#0078d4"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z" fill="#0078d4"/></svg></div>WPF</div>
+        <div class="tech-chip" style="--chip-color:#00bcf2"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h18v2H3V5zm0 4h18v2H3V9zm0 4h12v2H3v-2zm0 4h8v2H3v-2z" fill="#00bcf2"/></svg></div>WinUI</div>
+        <div class="tech-chip" style="--chip-color:#5c2d91"><div class="chip-icon"><svg viewBox="0 0 24 24" fill="#5c2d91"><path d="M3 3l7.5 9L3 21h2.5l5.5-6.88L17 21h3l-8-9.12L20 3h-2.5l-5 5.88L7.5 3H3z"/></svg></div>XAML</div>
+        <div class="tech-chip" style="--chip-color:#0078d4"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z" fill="#0078d4"/></svg></div>Windows Services</div>
+        <div class="tech-chip" style="--chip-color:#512bd4"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.853 16.504V7.496h1.44l5.668 7.16V7.496h1.332v9.008H9.85l-5.664-7.156v7.156H2.853zm10.277 0V7.496h7.02v1.16h-5.688v2.796h5.34v1.156h-5.34v2.736h5.836v1.16h-7.168zm-8.773 1.28a.777.777 0 0 0-.784.772c0 .432.352.78.784.78a.78.78 0 0 0 .784-.78.777.777 0 0 0-.784-.772z" fill="#512bd4"/></svg></div>.NET</div>
+      </div>
+    </div>
+
+    <div class="tech-category">
+      <div class="tech-cat-title">Tools &amp; Platforms</div>
+      <div class="tech-chips">
+        <div class="tech-chip" style="--chip-color:#f05032"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" fill="#f05032"/></svg></div>Git</div>
+        <div class="tech-chip" style="--chip-color:#0089d6"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.05 4.24L6.56 18.05l-4.53.01 5.32-9.25-2.69-4.57h8.39zm.7.44l4.05 14.4-4.15.01-1.12-4.23 2.78-4.83-1.56-5.35z" fill="#0089d6"/></svg></div>Azure</div>
+        <div class="tech-chip" style="--chip-color:#e74c3c"><div class="chip-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="12" rx="9.5" ry="6" stroke="#e74c3c" stroke-width="2" fill="none"/><ellipse cx="12" cy="12" rx="5" ry="5" stroke="#e74c3c" stroke-width="2" fill="none"/></svg></div>Oracle Cloud</div>
+        <div class="tech-chip" style="--chip-color:#c71a36"><div class="chip-icon"><svg viewBox="0 0 24 24" fill="#c71a36"><path d="M19.072 2.196l-.002.002-1.57 2.715L16.07 7.15l-1.458 2.524-1.527 2.642-.86 1.488-.834-1.437L9.9 9.858l-1.455-2.514-1.43-2.473L5.565 2.2l-.011-.004L4 2.927l7.994 15.48L20 2.927l-1.562-.73.634-.001zm-7.078 19.608L2.996 5.346.5 6.594l10.503 16.737 1.491-1.527zm0 0"/></svg></div>Maven</div>
+        <div class="tech-chip" style="--chip-color:#fe315d"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v24h24V0H0zm8.19 5.6c1.67 0 2.67.96 2.67 2.28 0 1-.56 1.76-1.39 2.13l1.67 2.49H9.5l-1.44-2.19H7.2v2.19H5.66V5.6h2.53zm7.22 0v1.39H12.8v1.35h2.34v1.38H12.8v1.38h2.67v1.4H11.2V5.6h4.21zM7.2 6.94v1.44h.88c.58 0 .94-.29.94-.73 0-.46-.33-.71-.93-.71H7.2zm-3.59 11.7h5.34v.79H3.61v-.79zm.03-5.32H12v.9H3.64v-.9z" fill="#fe315d"/></svg></div>IntelliJ IDEA</div>
+        <div class="tech-chip" style="--chip-color:#5c2d91"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.538.038L9.374 8.2 3.96 3.632 1.387 4.98v14.04l2.573 1.347 5.414-4.569 8.164 8.163L24 21.015V2.985L17.538.038zm.924 16.889l-6.596-5.028 6.596-5.028v10.056z" fill="#5c2d91"/></svg></div>Visual Studio</div>
+        <div class="tech-chip" style="--chip-color:#007acc"><div class="chip-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 19.986V4.014a1.5 1.5 0 0 0-.85-1.427zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" fill="#007acc"/></svg></div>VS Code</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="work-projects">
+  <div class="section-wrap">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Featured <em>Projects</em></h2>
+
+    <!-- Microsoft Project -->
+    <div style="margin-bottom:16px;padding:8px 16px;background:var(--tag-bg);border-radius:8px;display:inline-flex;align-items:center;gap:8px;font-family:'Fira Code',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;">
+      <svg viewBox="0 0 23 23" width="14" height="14"><rect x="0" y="0" width="10" height="10" fill="#f25022"/><rect x="12" y="0" width="10" height="10" fill="#7fba00"/><rect x="0" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+      Microsoft
+    </div>
+
+    <div class="projects-grid" style="margin-bottom:48px;">
+
+      <!-- WPF & WinUI -->
+      <div class="project-card" style="grid-column:span 2;">
+        <div class="project-num">01</div>
+        <div class="project-tags">
+          <span class="tag" style="background:rgba(0,188,242,.1);color:#00bcf2">WinUI 3</span>
+          <span class="tag" style="background:rgba(155,79,150,.1);color:#9b4f96">WPF</span>
+          <span class="tag" style="background:rgba(0,120,212,.1);color:#0078d4">C#</span>
+          <a href="https://learn.microsoft.com/en-us/windows/apps/desktop/" target="_blank" style="font-size:.68rem;color:var(--accent);font-family:'Fira Code',monospace;margin-left:auto;text-decoration:none;opacity:.8;">docs ↗</a>
+        </div>
+        <h3>Windows Developer Platform — WPF &amp; WinUI3</h3>
+        <p>Core contributor to Microsoft's Windows Developer Platform, modernising WPF experiences for Windows 11 and advancing WinUI 3 adoption across enterprise applications.</p>
+        <ul style="margin:14px 0 0 18px;font-size:.84rem;color:var(--text2);line-height:1.8;font-weight:300;">
+          <li>Integrated <strong>Azure OpenAI</strong> into the WPF DataGrid — reduced manual effort <strong>30%</strong>, accelerated decision-making <strong>20%</strong> via AI-driven reports and real-time chats.</li>
+          <li>Modernized core WPF experiences in Windows 11, raising community satisfaction from <strong>14 → 81</strong>, significantly enhancing user engagement.</li>
+          <li>Diagnosed and resolved performance bottlenecks in the WPF DataGrid, achieving a <strong>50% improvement</strong> in rendering speed for enterprise applications.</li>
+          <li>Triaged and merged <strong>5+ high-impact PRs</strong> from the open-source community, enhancing project visibility and collaboration.</li>
+          <li>Enhanced WinUI accessibility score from <strong>D → C</strong> by resolving 10+ bugs — ensured MAS and EAA compliance for users with disabilities.</li>
+        </ul>
+        <div class="project-highlights" style="margin-top:16px;">
+          <span class="hi" style="background:rgba(0,120,212,.12);color:#0078d4;border:1px solid rgba(0,120,212,.25)">Azure OpenAI</span>
+          <span class="hi">XAML</span><span class="hi">.NET</span><span class="hi">Open Source</span><span class="hi">Accessibility</span><span class="hi">Windows 11</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zoho / ManageEngine Projects -->
+    <div style="margin-bottom:16px;padding:8px 16px;background:var(--tag-bg);border-radius:8px;display:inline-flex;align-items:center;gap:8px;font-family:'Fira Code',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;">
+      <svg viewBox="0 0 80 30" width="32" height="12"><text x="0" y="11" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" fill="currentColor">zoho</text></svg>
+      Zoho · ManageEngine
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Zero Trust Security -->
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-tags">
+          <span class="tag" style="background:rgba(231,76,60,.1);color:#e76f00">Java</span>
+          <span class="tag" style="background:rgba(109,179,63,.1);color:#6db33f">SpringBoot</span>
+          <span class="tag" style="background:rgba(97,218,251,.1);color:#61dafb">ReactJS</span>
+          <a href="https://www.manageengine.com/privileged-access-management/help/zerotrust.html" target="_blank" style="font-size:.68rem;color:var(--accent);font-family:'Fira Code',monospace;margin-left:auto;text-decoration:none;opacity:.8;">docs ↗</a>
+        </div>
+        <h3>Zero Trust Security Model</h3>
+        <p>Built multiple components enhancing security policy configuration and resource group mapping within PAM360's Zero Trust architecture.</p>
+        <ul style="margin:12px 0 0 16px;font-size:.82rem;color:var(--text2);line-height:1.75;font-weight:300;">
+          <li>Implemented <strong>WebSockets &amp; DB listeners</strong> — up to <strong>90% faster</strong> connection processing, significantly reduced latency.</li>
+          <li>Designed UI with <strong>ReactJS, CSS, jQuery, HTML</strong>, increasing engagement and satisfaction.</li>
+          <li>Engineered database backend with <strong>ORM over PostgreSQL</strong> for efficient CRUD and data management.</li>
+        </ul>
+        <div class="project-highlights" style="margin-top:14px;">
+          <span class="hi" style="background:rgba(232,82,42,.1);color:#e8522a;border:1px solid rgba(232,82,42,.2)">REST APIs</span>
+          <span class="hi">Jersey</span><span class="hi">PostgreSQL</span><span class="hi">WebSockets</span>
+        </div>
+      </div>
+
+      <!-- Password-less High Privilege -->
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-tags">
+          <span class="tag" style="background:rgba(155,79,150,.1);color:#9b4f96">C#</span>
+          <span class="tag" style="background:rgba(0,120,212,.1);color:#0078d4">WPF</span>
+          <span class="tag" style="background:rgba(231,76,60,.1);color:#e76f00">Java</span>
+        </div>
+        <h3>Privileged Access — Password-less Actions</h3>
+        <p>Developed a solution for performing high-privilege actions on applications without sharing passwords, with multi-user process execution support.</p>
+        <ul style="margin:12px 0 0 16px;font-size:.82rem;color:var(--text2);line-height:1.75;font-weight:300;">
+          <li>Created an application for running processes under different user contexts securely.</li>
+          <li>Implemented <strong>Web APIs</strong> to retrieve high-privilege account passwords and track elevation status.</li>
+        </ul>
+        <div class="project-highlights" style="margin-top:14px;">
+          <span class="hi">EmberJS</span><span class="hi">WPF</span><span class="hi">Java Servlets</span><span class="hi">Windows Shell</span>
+        </div>
+      </div>
+
+      <!-- Agent Services Upgrade -->
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-tags">
+          <span class="tag" style="background:rgba(155,79,150,.1);color:#9b4f96">C#</span>
+          <span class="tag" style="background:rgba(0,120,212,.1);color:#0078d4">Win Service</span>
+          <span class="tag" style="background:rgba(0,173,181,.1);color:#00adb5">Golang</span>
+        </div>
+        <h3>Agent Services Modernisation</h3>
+        <p>Upgraded legacy agent services with new technologies for greater scalability and compactness across Windows and Linux environments.</p>
+        <ul style="margin:12px 0 0 16px;font-size:.82rem;color:var(--text2);line-height:1.75;font-weight:300;">
+          <li>Designed new <strong>Windows Services &amp; Web APIs</strong> with time-based dynamic account filtering.</li>
+          <li>Provided <strong>auto-start on failure</strong> and bundled easy debugging tooling for customer support.</li>
+        </ul>
+        <div class="project-highlights" style="margin-top:14px;">
+          <span class="hi">Golang</span><span class="hi">Bash</span><span class="hi">Java Servlets</span><span class="hi">Linux</span>
+        </div>
+      </div>
+
+      <!-- RDP/SSH Password-less -->
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-tags">
+          <span class="tag" style="background:rgba(155,79,150,.1);color:#9b4f96">C#</span>
+          <span class="tag" style="background:rgba(231,76,60,.1);color:#e76f00">Java</span>
+          <span class="tag" style="background:rgba(100,100,100,.1);color:#666">C / C++</span>
+        </div>
+        <h3>Password-less RDP &amp; SSH Connections</h3>
+        <p>Launched an app enabling seamless password-less connections to RDP and SSH, integrating with open-source tooling and providing generic REST audit APIs.</p>
+        <ul style="margin:12px 0 0 16px;font-size:.82rem;color:var(--text2);line-height:1.75;font-weight:300;">
+          <li>Built an integrable <strong>WPF control</strong> for RDP connections with resource-binding UI.</li>
+          <li>Bundled password APIs into <strong>open-source PuTTY</strong> (C).</li>
+          <li>Created <strong>REST API</strong> for generic auditing from external apps.</li>
+        </ul>
+        <div class="project-highlights" style="margin-top:14px;">
+          <span class="hi">WPF</span><span class="hi">RDP C++</span><span class="hi">PuTTY</span><span class="hi">Java Jersey</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="work-achievements">
+  <div class="section-wrap">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Awards &amp; <em>Achievements</em></h2>
+    <div class="ach-grid">
+
+      <div class="ach-card" style="border-top:3px solid #00a4ef">
+        <span class="ach-icon" style="display:flex;align-items:center;justify-content:center;gap:4px;">
+          <svg viewBox="0 0 23 23" width="36" height="36"><rect x="0" y="0" width="10" height="10" fill="#f25022"/><rect x="12" y="0" width="10" height="10" fill="#7fba00"/><rect x="0" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        </span>
+        <span class="ach-year" style="color:#00a4ef">2024 · Microsoft</span>
+        <h3>.NET Conf 2024</h3>
+        <p>Member of the development team for .NET Conf 2024, contributing to key deliverables for one of Microsoft's flagship developer conferences.</p>
+      </div>
+
+      <div class="ach-card" style="border-top:3px solid #e8522a">
+        <span class="ach-icon">🏆</span>
+        <span class="ach-year" style="color:#e8522a">2023 · Zoho / ManageEngine</span>
+        <h3>Top-Ranked Feature — Top 5 of 2023</h3>
+        <p>Led development of a feature ranked in the top 5 of 2023, demonstrating expertise in creating high-impact, innovative products that users love.</p>
+      </div>
+
+      <div class="ach-card" style="border-top:3px solid #e8522a">
+        <span class="ach-icon">🌍</span>
+        <span class="ach-year" style="color:#e8522a">Dubai Expo &amp; US RSA Conference · Zoho</span>
+        <h3>Global Event Pre-Launch</h3>
+        <p>Created a feature that pre-launched at the Dubai Expo and US RSA Conference, elevating PAM360's status to meet Gartner Magic Quadrant eligibility criteria.</p>
+      </div>
+
+      <div class="ach-card" style="border-top:3px solid #7c3aed">
+        <span class="ach-icon">🎓</span>
+        <span class="ach-year" style="color:#7c3aed">Campus · SKCET</span>
+        <h3>Guest Speaker &amp; Placement Panel</h3>
+        <p>Served on the placement review panel and was invited as a guest speaker for placement orientation sessions, mentoring the next generation of engineers.</p>
+      </div>
+
+      <div class="ach-card" style="border-top:3px solid #7c3aed">
+        <span class="ach-icon">🎓</span>
+        <span class="ach-year" style="color:#7c3aed">2016–2020 · SKCET</span>
+        <h3>Academic Excellence — CGPA 8.9</h3>
+        <p>Graduated with a CGPA of 8.9 from Sri Krishna College of Engineering and Technology, demonstrating strong foundational excellence in computer science.</p>
+      </div>
+
+      <div class="ach-card" style="border-top:3px solid #e74c3c">
+        <span class="ach-icon">🚀</span>
+        <span class="ach-year" style="color:#e74c3c">2026 · Oracle</span>
+        <h3>Senior Engineer — Tier-1 Journey</h3>
+        <p>Built a path from a tier-2 college through Zoho and Microsoft to Senior Software Engineer at Oracle — a journey that now inspires other engineers navigating similar roads.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="work-contact">
+  <div class="section-wrap">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's <em>Connect</em></h2>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p>Whether you're interested in collaboration, have a question about my work, or just want to talk about watches and mechanical keyboards — my inbox is always open.</p>
+        <div class="contact-items">
+          <a href="mailto:sabareesanravi22@gmail.com" class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text"><strong>Email</strong><span>sabareesanravi22@gmail.com</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/sabareesan-ravi/" target="_blank" class="contact-item">
+            <div class="contact-item-icon">in</div>
+            <div class="contact-item-text"><strong>LinkedIn</strong><span>linkedin.com/in/sabareesan-ravi</span></div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text"><strong>Location</strong><span>India</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💼</div>
+            <div class="contact-item-text"><strong>Current Role</strong><span>Senior Software Engineer · Oracle</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-side">
+        <input type="text" id="cf-name" placeholder="Your Name" required>
+        <input type="email" id="cf-email" placeholder="Your Email" required>
+        <input type="text" id="cf-subject" placeholder="Subject" required>
+        <textarea id="cf-message" placeholder="Your message..." required></textarea>
+        <button class="btn-primary" id="cf-submit" style="width:100%" onclick="sendContactForm()">Send Message</button>
+        <div id="cf-status" style="margin-top:12px;font-size:.82rem;text-align:center;display:none;padding:10px 16px;border-radius:8px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- end work-only -->
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <a href="#">Sabareesan Ravi</a> · Built with care · <span id="footer-mode">Personal Mode</span></p>
+</footer>
+
+
+<script>
+function sendContactForm() {
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const subject = document.getElementById('cf-subject').value.trim();
+  const message = document.getElementById('cf-message').value.trim();
+  const status  = document.getElementById('cf-status');
+  const btn     = document.getElementById('cf-submit');
+
+  if (!name || !email || !subject || !message) {
+    status.style.display = 'block';
+    status.style.background = 'rgba(231,76,60,.12)';
+    status.style.color = '#e74c3c';
+    status.style.border = '1px solid rgba(231,76,60,.25)';
+    status.textContent = 'Please fill in all fields.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  status.style.display = 'none';
+
+  emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', {
+    from_name:    name,
+    from_email:   email,
+    subject:      subject,
+    message:      message,
+    to_email:     'sabareesanravi22@gmail.com'
+  }).then(() => {
+    status.style.display = 'block';
+    status.style.background = 'rgba(61,110,42,.12)';
+    status.style.color = 'var(--accent)';
+    status.style.border = '1px solid rgba(61,110,42,.25)';
+    status.textContent = '✓ Message sent! I'll get back to you soon.';
+    btn.textContent = 'Message Sent ✓';
+    document.getElementById('cf-name').value = '';
+    document.getElementById('cf-email').value = '';
+    document.getElementById('cf-subject').value = '';
+    document.getElementById('cf-message').value = '';
+    setTimeout(() => { btn.disabled = false; btn.textContent = 'Send Message'; }, 4000);
+  }).catch((err) => {
+    status.style.display = 'block';
+    status.style.background = 'rgba(231,76,60,.12)';
+    status.style.color = '#e74c3c';
+    status.style.border = '1px solid rgba(231,76,60,.25)';
+    status.textContent = 'Failed to send. Please email directly: sabareesanravi22@gmail.com';
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+    console.error('EmailJS error:', err);
+  });
+}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
