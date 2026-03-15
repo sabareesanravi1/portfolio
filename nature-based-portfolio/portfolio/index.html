@@ -83,10 +83,8 @@
     <h1 class="hero-name">Sabareesan<br><em>Ravi</em></h1>
     <p class="hero-role">Senior Software Engineer · <strong>Oracle</strong></p>
     <div class="hero-cta">
-      <a href="#personal-intro" class="btn-primary">Explore Personal</a>
-      <a href="#work-intro" class="btn-outline">View Work</a>
-    </div>
-  </div>
+      <a href="#" class="btn-primary" id="cta-primary" onclick="setMode('personal');setTimeout(function(){var el=document.getElementById('personal-intro');if(el)el.scrollIntoView({behavior:'smooth'});},400);return false;">Explore Personal</a>
+      <a href="#" class="btn-outline" id="cta-secondary" onclick="setMode('work');setTimeout(function(){var el=document.getElementById('work-intro');if(el)el.scrollIntoView({behavior:'smooth'});},400);return false;">View Work</a>  </div>
 </section>
 
 <!-- ============================= PERSONAL SECTIONS ============================= -->
@@ -120,7 +118,7 @@
 
 <!-- YOUTUBE -->
 <section id="personal-youtube">
-  <div id="work-intro" class="section-wrap">
+  <div class="section-wrap">
     <div class="section-label">YouTube</div>
     <h2 class="section-title">Watch me on <em>YouTube</em></h2>
 
